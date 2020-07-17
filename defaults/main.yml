@@ -1,0 +1,28 @@
+---
+##########################
+# operator
+
+operator_user: dragon
+operator_group: "{{ operator_user }}"
+
+##########################
+# docker
+
+docker_registry: index.docker.io
+
+##########################
+# zabbix
+
+zabbix_configuration_directory: /opt/zabbix/configuration
+zabbix_docker_compose_directory: /opt/zabbix
+
+zabbix_host: 127.0.0.1
+zabbix_hostname: "{{ zabbix_host }}"
+zabbix_port: 10051
+
+zabbix_tag: alpine-latest
+zabbix_image: "{{ docker_registry }}/zabbix/zabbix-server-mysql:{{ zabbix_tag }}"
+
+zabbix_container_name: zabbix
+
+zabbix_network: 172.31.100.112/28

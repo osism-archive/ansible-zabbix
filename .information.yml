@@ -1,0 +1,7 @@
+---
+ansible_role_name: zabbix
+distributions:
+  - bionic
+  - focal
+molecule_needs_docker: true
+travis_decrypt_key: fb10f4671cc8
